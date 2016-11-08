@@ -4,7 +4,7 @@
 
 CREATE TABLE pub_publicaciones (
     id                    serial                         PRIMARY KEY,
-    seccion               integer                        REFERENCES cat_regiones NOT NULL,
+    seccion               integer                        REFERENCES cat_secciones NOT NULL,
 
     fecha                 timestamp without time zone    NOT NULL,
     nombre                character varying              NOT NULL,
@@ -20,5 +20,22 @@ CREATE TABLE pub_publicaciones (
     archivo               character varying,
 
     notas                 text,
-    estatus               character(1)         DEFAULT 'A'::bpchar NOT NULL
+    creado                timestamp without time zone    DEFAULT ('now'::text)::timestamp without time zone,
+    modificado            timestamp without time zone    DEFAULT ('now'::text)::timestamp without time zone,
+    estatus               character(1)                   DEFAULT 'A'::bpchar NOT NULL
 );
+
+--
+-- Que al modificar ponga a modificado con el tiempo actual
+--
+
+CREATE OR REPLACE FUNCTION pub_publicaciones_modificar() RETURNS TRIGGER AS $nulo$
+    BEGIN
+        NEW.modificado = now();
+        RETURN NEW;
+    END;
+$nulo$ LANGUAGE plpgsql;
+
+CREATE TRIGGER pub_publicaciones_modificar_trigger
+    AFTER UPDATE ON pub_publicaciones
+    FOR EACH ROW EXECUTE PROCEDURE pub_publicaciones_modificar();

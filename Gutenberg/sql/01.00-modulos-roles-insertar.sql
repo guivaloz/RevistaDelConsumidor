@@ -2,7 +2,7 @@
 -- Modulos Roles Insertar
 --
 
-INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (101, 'pub_nulo',                     '-Editorial',    'folder.png', 'catsecciones.php',               10); -- 10
+INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (101, 'pub_nulo',                     '-Editorial',    'folder.png', 'catsecciones.php',             NULL); -- 10
 INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (111, 'cat_secciones',                'Secciones',     'folder.png', 'catsecciones.php',               10); -- 11
 INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (151, 'pub_publicaciones',            'Publicaciones', 'folder.png', 'pubpublicaciones.php',           10); -- 12
 INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (153, 'pub_publicaciones_autores',    'P. Autores',    'folder.png', 'pubpublicacionesautores.php',    10); -- 13

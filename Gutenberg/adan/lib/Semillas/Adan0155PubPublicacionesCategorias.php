@@ -56,7 +56,6 @@ class Adan0155PubPublicacionesCategorias extends \Arbol\Adan {
      */
     public function __construct() {
         // Programas a escribir
-        $this->modulo_solo_consulta();
         $this->modulo_sin_herederos();
         // Obtener de serpiente
         $serpiente = new Serpiente();
@@ -67,8 +66,6 @@ class Adan0155PubPublicacionesCategorias extends \Arbol\Adan {
         // Padre, el módulo que mostrará a éste como un listado debajo de aquel
         $this->padre['publicacion']      = $serpiente->obtener_datos_del_modulo('PubPublicaciones');
         $this->padre['categoria']        = $serpiente->obtener_datos_del_modulo('CatCategorias');
-        // Hijos, los módulos que se mostrarán debajo del detalle como listados
-    //~ $this->hijos['identificador']    = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
         // Siempre se debe de cargar de serpiente esta informacion
         $this->sustituciones             = $serpiente->obtener_sustituciones($this->nombre);
         $this->instancia_singular        = $serpiente->obtener_instancia_singular($this->nombre);

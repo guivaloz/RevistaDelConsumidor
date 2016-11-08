@@ -25,7 +25,7 @@ class Adan0151PubPublicaciones extends \Arbol\Adan {
 
         'fecha'              => array('tipo' => 'fecha',    'etiqueta' => 'Fecha',          'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 2, 'listado' => 11),
         'nombre'             => array('tipo' => 'nombre',   'etiqueta' => 'Nombre',         'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 12, 'orden' => 1, 'vip' => 2),
-        'descripcion'        => array('tipo' => 'frase',    'etiqueta' => 'Descripción',    'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 13),
+        'descripcion'        => array('tipo' => 'notas',    'etiqueta' => 'Descripción',    'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1),
         'palabras_clave'     => array('tipo' => 'nombre',   'etiqueta' => 'Palabras clave', 'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 14),
 
         'autores_captura'    => array('tipo' => 'nombre',   'etiqueta' => 'Autores',        'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 21),

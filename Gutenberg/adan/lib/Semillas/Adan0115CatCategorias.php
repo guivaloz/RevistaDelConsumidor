@@ -60,10 +60,6 @@ class Adan0115CatCategorias extends \Arbol\Adan {
         $this->modulo_completo();
         // Obtener de serpiente
         $serpiente = new Serpiente();
-        // Relaciones, cada modulo con el que está relacionado sin incluir a los hijos
-    //~ $this->relaciones['columna']  = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
-        // Padre, el módulo que mostrará a éste como un listado debajo de aquel
-    //~ $this->padre['columna']       = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
         // Hijos, los módulos que se mostrarán debajo del detalle como listados
         $this->hijos['publicaciones'] = $serpiente->obtener_datos_del_modulo('PubPublicacionesCategorias');
         // Siempre se debe de cargar de serpiente esta informacion
