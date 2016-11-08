@@ -12,9 +12,6 @@ CREATE TABLE adm_departamentos (
     estatus  character(1)           DEFAULT 'A'::bpchar NOT NULL
 );
 
--- Departamento Desarrolladores
-INSERT INTO adm_departamentos (nombre, clave) VALUES ('Desarrollo de Sistemas',        'SIS'); -- 1
-INSERT INTO adm_departamentos (nombre, clave) VALUES ('Dirección General',             'GEN'); -- 2
-INSERT INTO adm_departamentos (nombre, clave) VALUES ('Dirección Administrativa',      'ADM'); -- 3
-INSERT INTO adm_departamentos (nombre, clave) VALUES ('Dirección de Recursos Humanos', 'RHU'); -- 4
-
+-- Departamentos
+INSERT INTO adm_departamentos (nombre, clave) VALUES ('Desarrollo de Sistemas', 'SIS'); -- 1
+INSERT INTO adm_departamentos (nombre, clave) VALUES ('Editorialistas',         'EDI'); -- 2

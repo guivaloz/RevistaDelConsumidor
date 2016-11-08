@@ -23,10 +23,9 @@ CREATE TABLE adm_usuarios (
     estatus                 character(1)            DEFAULT 'A'::bpchar NOT NULL
 );
 
--- Desarrolladores
-INSERT INTO adm_usuarios (nom_corto, nombre, tipo, contrasena, contrasena_expira) VALUES ('sistema',       'Sistema',          'A', 'BohReipa9ihojai8', '2020-12-31'); -- 1
-INSERT INTO adm_usuarios (nom_corto, nombre, tipo, contrasena)                    VALUES ('guivaloz',      'Guillermo Valdés', 'A', 'datacat'); -- 2
+-- Desarrollo de Sistemas
+INSERT INTO adm_usuarios (nom_corto, nombre, tipo, contrasena, contrasena_expira) VALUES ('sistema',  'Sistema',          'A', 'ieho8Vee8aeh9AeB', '2020-12-31'); -- 1
+INSERT INTO adm_usuarios (nom_corto, nombre, tipo, contrasena)                    VALUES ('guivaloz', 'Guillermo Valdés', 'A', 'datacat'); -- 2
 
--- Administradores
-INSERT INTO adm_usuarios (nom_corto, nombre, tipo, contrasena)                    VALUES ('administrador', 'Administrador',    'A', 'qwerty'); -- 3
-
+-- Editorialistas
+INSERT INTO adm_usuarios (nom_corto, nombre, tipo, contrasena)                    VALUES ('editor',   'Editor',           'A', 'qwerty'); -- 3

@@ -56,10 +56,12 @@ class Adan0153PubPublicacionesAutores extends \Arbol\Adan {
      */
     public function __construct() {
         // Programas a escribir
-        $this->modulo_completo();
+        $this->modulo_solo_consulta();
+        $this->modulo_sin_herederos();
         // Obtener de serpiente
         $serpiente = new Serpiente();
         // Relaciones, cada modulo con el que está relacionado sin incluir a los hijos
+        $this->relaciones['seccion']     = $serpiente->obtener_datos_del_modulo('CatSecciones');
         $this->relaciones['publicacion'] = $serpiente->obtener_datos_del_modulo('PubPublicaciones');
         $this->relaciones['autor']       = $serpiente->obtener_datos_del_modulo('CatAutores');
         // Padre, el módulo que mostrará a éste como un listado debajo de aquel
