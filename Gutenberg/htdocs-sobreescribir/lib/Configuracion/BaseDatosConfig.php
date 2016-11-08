@@ -29,9 +29,9 @@ namespace Configuracion;
  */
 abstract class BaseDatosConfig {
 
-    protected $bd_nombre  = 'base_de_datos';    // DEBE DEFINIR el nombre de la base de datos PostgreSQL
+    protected $bd_nombre  = 'revistadelconsumidor_gutenberg';
     protected $servidor   = 'localhost';
-    protected $usuario    = 'usuario_postgres'; // DEBE DEFINIR el usuario con privilegios a la base de datos
+    protected $usuario    = 'revistadelconsumidor';
     protected $password   = '';
 
 } // Clase abstracta BaseDatosConfig

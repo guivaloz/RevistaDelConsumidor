@@ -25,7 +25,7 @@ class Adan0151PubPublicaciones extends \Arbol\Adan {
 
         'fecha'              => array('tipo' => 'fecha',    'etiqueta' => 'Fecha',          'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 2, 'listado' => 11),
         'nombre'             => array('tipo' => 'nombre',   'etiqueta' => 'Nombre',         'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 12, 'orden' => 1, 'vip' => 2),
-        'descripcion'        => array('tipo' => 'frase',    'etiqueta' => 'Descripción',    'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 13);
+        'descripcion'        => array('tipo' => 'frase',    'etiqueta' => 'Descripción',    'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 13),
         'palabras_clave'     => array('tipo' => 'nombre',   'etiqueta' => 'Palabras clave', 'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 14),
 
         'autores_captura'    => array('tipo' => 'nombre',   'etiqueta' => 'Autores',        'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 21),
@@ -73,11 +73,14 @@ class Adan0151PubPublicaciones extends \Arbol\Adan {
         // Obtener de serpiente
         $serpiente = new Serpiente();
         // Relaciones, cada modulo con el que está relacionado sin incluir a los hijos
-        $this->relaciones['columna']  = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
+        $this->relaciones['seccion']  = $serpiente->obtener_datos_del_modulo('CatSecciones');
         // Padre, el módulo que mostrará a éste como un listado debajo de aquel
-        $this->padre['columna']       = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
+        $this->padre['seccion']       = $serpiente->obtener_datos_del_modulo('CatSecciones');
         // Hijos, los módulos que se mostrarán debajo del detalle como listados
-        $this->hijos['identificador'] = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
+        $this->hijos['autores']       = $serpiente->obtener_datos_del_modulo('PubPublicacionesAutores');
+        $this->hijos['categorias']    = $serpiente->obtener_datos_del_modulo('PubPublicacionesCategorias');
+        $this->hijos['fuentes']       = $serpiente->obtener_datos_del_modulo('PubPublicacionesFuentes');
+        $this->hijos['regiones']      = $serpiente->obtener_datos_del_modulo('PubPublicacionesRegiones');
         // Siempre se debe de cargar de serpiente esta informacion
         $this->sustituciones          = $serpiente->obtener_sustituciones($this->nombre);
         $this->instancia_singular     = $serpiente->obtener_instancia_singular($this->nombre);

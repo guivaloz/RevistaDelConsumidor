@@ -61,11 +61,11 @@ class Adan0115CatCategorias extends \Arbol\Adan {
         // Obtener de serpiente
         $serpiente = new Serpiente();
         // Relaciones, cada modulo con el que está relacionado sin incluir a los hijos
-        $this->relaciones['columna']  = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
+    //~ $this->relaciones['columna']  = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
         // Padre, el módulo que mostrará a éste como un listado debajo de aquel
-        $this->padre['columna']       = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
+    //~ $this->padre['columna']       = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
         // Hijos, los módulos que se mostrarán debajo del detalle como listados
-        $this->hijos['identificador'] = $serpiente->obtener_datos_del_modulo('XxxModuloNombre');
+        $this->hijos['publicaciones'] = $serpiente->obtener_datos_del_modulo('PubPublicacionesCategorias');
         // Siempre se debe de cargar de serpiente esta informacion
         $this->sustituciones          = $serpiente->obtener_sustituciones($this->nombre);
         $this->instancia_singular     = $serpiente->obtener_instancia_singular($this->nombre);

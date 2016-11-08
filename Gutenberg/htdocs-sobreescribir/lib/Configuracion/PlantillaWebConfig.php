@@ -29,7 +29,7 @@ namespace Configuracion;
  */
 abstract class PlantillaWebConfig {
 
-    protected $sistema              = 'GenesisPHP Eva';
+    protected $sistema              = 'Revista del Consumidor - Gutenberg';
     protected $titulo               = ''; // Mantenga como texto vacío para que cada página lo defina
     protected $descripcion          = 'GenesisPHP es un framework hecho con PHP';
     protected $autor                = 'guivaloz';
