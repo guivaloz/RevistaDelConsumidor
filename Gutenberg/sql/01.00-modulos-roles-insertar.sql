@@ -16,6 +16,8 @@ INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (815
 INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (817, 'cat_fuentes',                  'Fuentes',       'folder.png', 'catfuentes.php',                 17); -- 20
 INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (819, 'cat_regiones',                 'Regiones',      'folder.png', 'catregiones.php',                17); -- 21
 
+INSERT INTO adm_modulos (orden, clave, nombre, icono, pagina, padre) VALUES (171, 'gut_bitacoras',                'Bitácoras',     'folder.png', 'gutbitacoras.php',             NULL); -- 22
+
 --
 -- Desarrollo de Sistemas(1)
 --
@@ -34,6 +36,8 @@ INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (1, 19, 5); 
 INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (1, 20, 5); --   Fuentes
 INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (1, 21, 5); --   Regiones
 
+INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (1, 22, 1); -- Bitacoras
+
 --
 -- Editorialistas(2)
 --
@@ -51,3 +55,5 @@ INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (2, 18, 1); 
 INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (2, 19, 1); --   Categorías
 INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (2, 20, 1); --   Fuentes
 INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (2, 21, 1); --   Regiones
+
+INSERT INTO adm_roles (departamento, modulo, permiso_maximo) VALUES (2, 22, 1); -- Bitacoras

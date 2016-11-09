@@ -28,8 +28,8 @@ SOY="[Crear Exclusivos]"
 EXITO=0
 E_FATAL=99
 
-# Nombres de los directorios
-DESTINO_DIR="Demostracion"
+# Constantes
+SITIO_WEB_DIR="${HOME}/Documentos/GitHub/MovimientoLibre/revistadelconsumidor"
 
 # Validar que exista el directorio Eva
 if [ ! -d ../Eva ]; then
@@ -42,6 +42,18 @@ fi
 #
 # Escriba aquí los comandos exclusivos para este sistema
 #
+
+echo "$SOY Creando enlace de Base del sitio web..."
+ln -s $SITIO_WEB_DIR/lib/Base                htdocs/lib/
+echo "$SOY Creando enlace de EstudiosDeCalidad del sitio web..."
+ln -s $SITIO_WEB_DIR/lib/EstudiosDeCalidad   htdocs/lib/
+echo "$SOY Creando enlace de PlatilloSabio del sitio web..."
+ln -s $SITIO_WEB_DIR/lib/PlatilloSabio       htdocs/lib/
+echo "$SOY Creando enlace de TecnologiaDomestica del sitio web..."
+ln -s $SITIO_WEB_DIR/lib/TecnologiaDomestica htdocs/lib/
+
+echo "$SOY Creando enlace de PublicacionConfig.php del sitio web..."
+ln -s $SITIO_WEB_DIR/lib/Configuracion/PublicacionConfig.php htdocs/lib/Configuracion/
 
 echo "$SOY Script terminado."
 exit $EXITO

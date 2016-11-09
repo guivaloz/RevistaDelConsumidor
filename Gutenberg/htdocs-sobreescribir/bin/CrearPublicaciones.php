@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 /**
- * Gutenberg - AlimentarPublicaciones
+ * Gutenberg - CrearPublicaciones
  *
  * Copyright (C) 2016 Guillermo Valdes Lozano guillermo@movimientolibre.com
  *
@@ -22,7 +22,7 @@
  */
 
 // Soy
-$soy = '[Alimentar Publicaciones]';
+$soy = '[Crear Publicaciones]';
 
 // Valores de salida
 $EXITO=0;
@@ -32,7 +32,7 @@ $E_FATAL=99;
 function ayuda() {
     echo "\n";
     echo "Objetivo:\n";
-    echo "  Obtener los archivos PHP de las Publicaciones para ALIMENTAR la Base de Datos.\n";
+    echo "  CREAR los archivos PHP con las publicaciones a partir de los registros en la Base de Datos.\n";
     echo "\n";
     echo "Sintaxis:\n";
     echo "  AlimentarPublicaciones.php\n";
@@ -56,9 +56,9 @@ $sesion = new \Inicio\Sesion('sistema');
 
 // Proceso principal
 echo "$soy Inicia.\n";
-$alimentador = new \GutAlimentadores\Alimentar($sesion);
+$creador = new \GutCreadores\Crear($sesion);
 try {
-    echo $alimentador->alimentar()."\n";
+    echo $creador->crear()."\n";
 } catch (\Exception $e) {
     echo "$soy ".$e->getMessage()."\n";
     exit($E_FATAL);

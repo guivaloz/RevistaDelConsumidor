@@ -2,7 +2,22 @@
 /**
  * GenesisPHP - Semilla
  *
- * @package GenesisPHP
+ * Copyright (C) 2016 Guillermo Valdes Lozano guillermo@movimientolibre.com
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @package Gutenberg
  */
 
 namespace Semillas;
@@ -28,13 +43,13 @@ class Adan0151PubPublicaciones extends \Arbol\Adan {
         'descripcion'        => array('tipo' => 'notas',    'etiqueta' => 'Descripción',    'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1),
         'palabras_clave'     => array('tipo' => 'nombre',   'etiqueta' => 'Palabras clave', 'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 14),
 
-        'autores_captura'    => array('tipo' => 'nombre',   'etiqueta' => 'Autores',        'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 21),
-        'categorias_captura' => array('tipo' => 'nombre',   'etiqueta' => 'Categorías',     'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 23),
-        'fuentes_captura'    => array('tipo' => 'nombre',   'etiqueta' => 'Fuentes',        'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 24),
-        'regiones_captura'   => array('tipo' => 'nombre',   'etiqueta' => 'Regiones',       'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 25),
+        'autores_captura'    => array('tipo' => 'nombre',   'etiqueta' => 'Autores',        'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1),
+        'categorias_captura' => array('tipo' => 'nombre',   'etiqueta' => 'Categorías',     'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1),
+        'fuentes_captura'    => array('tipo' => 'nombre',   'etiqueta' => 'Fuentes',        'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1),
+        'regiones_captura'   => array('tipo' => 'nombre',   'etiqueta' => 'Regiones',       'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1),
 
-        'clase'              => array('tipo' => 'nombre',   'etiqueta' => 'Clase',          'validacion' => 1, 'agregar' => 1, 'modificar' => 1),
-        'archivo'            => array('tipo' => 'nombre',   'etiqueta' => 'Archivo',        'validacion' => 1, 'agregar' => 1, 'modificar' => 1),
+        'clase'              => array('tipo' => 'nombre',   'etiqueta' => 'Clase',          'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1),
+        'archivo'            => array('tipo' => 'nombre',   'etiqueta' => 'Archivo',        'validacion' => 1, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1),
 
         'notas'              => array('tipo' => 'notas',    'etiqueta' => 'Notas',          'validacion' => 1, 'agregar' => 1, 'modificar' => 1),
         'estatus'            => array('tipo' => 'caracter', 'etiqueta' => 'Estatus',        'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 99,

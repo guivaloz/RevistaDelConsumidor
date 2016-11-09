@@ -2,7 +2,22 @@
 /**
  * GenesisPHP - Semilla
  *
- * @package GenesisPHP
+ * Copyright (C) 2016 Guillermo Valdes Lozano guillermo@movimientolibre.com
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @package Gutenberg
  */
 
 namespace Semillas;
@@ -20,12 +35,13 @@ class Adan0111CatSecciones extends \Arbol\Adan {
 
     // Datos de la tabla
     public $tabla = array(
-        'id'      => array('tipo' => 'serial'),
+        'id'         => array('tipo' => 'serial'),
 
-        'nombre'  => array('tipo' => 'nombre',   'etiqueta' => 'Nombre',  'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 11, 'orden' => 1, 'vip' => 2),
+        'nombre'     => array('tipo' => 'nombre',   'etiqueta' => 'Nombre',     'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 11, 'orden' => 1, 'vip' => 2),
+        'directorio' => array('tipo' => 'nombre',   'etiqueta' => 'Directorio', 'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 12),
 
-        'notas'   => array('tipo' => 'notas',    'etiqueta' => 'Notas',   'validacion' => 1, 'agregar' => 1, 'modificar' => 1),
-        'estatus' => array('tipo' => 'caracter', 'etiqueta' => 'Estatus', 'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 99,
+        'notas'      => array('tipo' => 'notas',    'etiqueta' => 'Notas',      'validacion' => 1, 'agregar' => 1, 'modificar' => 1),
+        'estatus'    => array('tipo' => 'caracter', 'etiqueta' => 'Estatus',    'validacion' => 2, 'agregar' => 1, 'modificar' => 1, 'filtro' => 1, 'listado' => 99,
             'descripciones' => array('A' => 'En Uso',       'B' => 'Eliminado'),
             'etiquetas'     => array('A' => 'En Uso',       'B' => 'Eliminado'),
             'colores'       => array('A' => 'blanco',       'B' => 'gris'),
