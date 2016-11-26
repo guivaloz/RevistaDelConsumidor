@@ -53,7 +53,7 @@ class Alimentar {
         }
         // Obtener el listado con los archivos PHP
         $globo = glob("$ruta/*.php");
-        if ($globo === false) {
+        if ($globo === FALSE) {
             throw new \Exception("Aviso: Falló la obtención de archivos PHP en $ruta");
         }
         if (count($globo) == 0) {
